@@ -1,0 +1,250 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Fiorello - A Flower Shop and Florist";
+}
+
+<!-- slider start -->
+
+<section id="slider">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="slider">
+                <div class="images">
+                    @foreach (Slider item in Model.Sliders)
+                    {
+                        <div class="image @item.Class">
+                            <img src="~/img/@item.Image" alt="">
+                        </div>
+                    }
+                </div>
+                <span class="prev">
+                    &#10229;
+                    <span class="prev-num"></span>
+                </span>
+                <span class="next">
+                    &#10230;
+                    <span class="next-num"></span>
+                </span>
+            </div>
+            <div class="text">
+                <p class="header-text">@Model.Content.Title</p>
+                <p class="desc-text">
+                    @Model.Content.Description
+                </p>
+            </div>
+            <div class="addit-img">
+                <img src="~/img/@Model.Content.Image" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- slider end -->
+<!-- shop start -->
+
+<section id="shop">
+    <div class="container">
+        <div class="row">
+            <div class="categories">
+                <ul>
+                    <li><a class="activeCategory" data-id="1">ALL</a></li>
+                    @foreach (Category item in Model.Categories)
+                    {
+                        int dataId = item.Id + 1;
+                        <li><a data-id="@dataId">@item.Name</a></li>
+                    }
+                </ul>
+            </div>
+
+            <div class="types">
+                <div class="type all activetype" data-id="1">
+                    <div class="row text-center">
+                        @await Component.InvokeAsync("Products",8)
+                    </div>
+                </div>
+                @foreach (Category category in Model.Categories)
+                {
+                    int dataId = category.Id + 1;
+                    <div class="type @category.Name.ToLower()" data-id="@dataId">
+                        <div class="row text-center">
+                            @foreach (Product product in Model.Products)
+                            {
+                                @if (product.CategoryId == category.Id)
+                                {
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 item">
+                                        <div class="image">
+                                            <img src="~/img/@product.Image" alt="@product.Name">
+                                        </div>
+                                        <div class="text">
+                                            <div class="name">@product.Name</div>
+                                            <div class="action">Add to Cart</div>
+                                            <div class="price">$@product.Price</div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- shop end -->
+<!-- offers start -->
+
+<section id="offers">
+    <div class="container">
+        <div class="row">
+            <div class="video col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="image-holder-outer">
+                    <div class="image">
+                        <img src="~/img/video.jpg" alt="">
+                    </div>
+                    <div class="circle">
+                        <i class="fas fa-caret-right play fa-3x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="text col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="header">
+                    <p class="headerText">
+                        Suprise Your <span>Valentine!</span>
+                        Let us arrange a smile.
+                    </p>
+                </div>
+                <div class="description">
+                    <p class="descText">
+                        Where flowers are our inspiration to create lasting memories. Whatever the
+                        occasion...
+                    </p>
+                </div>
+                <div class="offers">
+                    <div class="offer">
+                        <p class="offerText">Hand picked just for you.</p>
+                    </div>
+                    <div class="offer">
+                        <p class="offerText">Unique flower arrangements</p>
+                    </div>
+                    <div class="offer">
+                        <p class="offerText">Best way to say you care.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- offers end -->
+<!-- team start -->
+
+<section id="team">
+    <div class="container">
+        <div class="text text-center col-lg-12 col-md-12 col-sm-12 col-12">
+            <p class="header">Flower Experts</p>
+            <p class="description">
+                A perfect blend of creativity, energy, communication, happiness and love. Let us
+                arrange a smile for you.
+            </p>
+        </div>
+        <div class="row mt-5">
+            <div class="member col-lg-3 col-md-6 col-sm-12 col-12">
+                <div class="image">
+                    <img src="~/img/member-1.png" alt="">
+                </div>
+                <div class="name">CRYSTAL BROOKS</div>
+                <div class="position">Florist</div>
+            </div>
+            <div class="member col-lg-3 col-md-6 col-sm-12 col-12">
+                <div class="image">
+                    <img src="~/img/member-2.png" alt="">
+                </div>
+                <div class="name">SHIRLEY HARRIS</div>
+                <div class="position">Manager</div>
+            </div>
+            <div class="member col-lg-3 col-md-6 col-sm-12 col-12">
+                <div class="image">
+                    <img src="~/img/member-3.png" alt="">
+                </div>
+                <div class="name">BEVERLY CLARK</div>
+                <div class="position">Florist</div>
+            </div>
+            <div class="member col-lg-3 col-md-6 col-sm-12 col-12">
+                <div class="image">
+                    <img src="~/img/member-4.png" alt="">
+                </div>
+                <div class="name">AMANDA WATKINS</div>
+                <div class="position">Florist</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- team end -->
+<!-- subscribe field start -->
+
+<section id="subscribe-field">
+    <div class="container">
+        <div class="text text-center col-lg-12 col-md-12 col-sm-12 col-12">
+            <p>Join The Colorful Bunch!</p>
+        </div>
+        <div class="row no-gutters justify-content-center">
+            <div class="email col-lg-6 col-md-6 col-sm-6 col-6">
+                <input type="email" class="input" placeholder="Email Address" autocomplete="off">
+            </div>
+            <div class="subscribe col-lg-2 col-md-2 col-sm-2 col-2">
+                <input type="submit" value="SUBSCRIBE" class="button">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- subscribe field end -->
+<!-- blog start-->
+
+<section id="blog">
+    <div class="container">
+        <div class="text text-center col-lg-12 col-md-12 col-sm-12 col-12">
+            <p class="header">From our Blog</p>
+            <p class="description">
+                A perfect blend of creativity, energy, communication, happiness and love. Let us
+                arrange a smile for you.
+            </p>
+        </div>
+        <div class="row mt-5">
+            <div class="item col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="image">
+                    <img src="~/img/blog-1.jpg" alt="">
+                    <div class="date">
+                        <p>27.04.2018</p>
+                    </div>
+                </div>
+                <div class="title">Flower Power</div>
+                <div class="info">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per</div>
+            </div>
+            <div class="item col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="image">
+                    <img src="~/img/blog-2.jpg" alt="">
+                    <div class="date">
+                        <p>03.05.2018</p>
+                    </div>
+                </div>
+                <div class="title">Local Florists</div>
+                <div class="info">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per</div>
+            </div>
+            <div class="item col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="image">
+                    <img src="~/img/blog-3.jpg" alt="">
+                    <div class="date">
+                        <p>03.05.2018</p>
+                    </div>
+                </div>
+                <div class="title">Flower Beauty</div>
+                <div class="info">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- blog end-->

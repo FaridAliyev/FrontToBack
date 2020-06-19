@@ -1,0 +1,16 @@
+﻿@model IEnumerable<ProductVM>
+
+@foreach (ProductVM product in Model)
+{
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12 item">
+        <div class="image">
+            <img src="~/img/@product.Image" alt="@product.Name">
+        </div>
+        <div class="text">
+            <div class="name">@product.Name</div>
+            <div class="action">Add to Cart</div>
+            <div class="price">$@product.Price</div>
+        </div>
+    </div>
+}
+

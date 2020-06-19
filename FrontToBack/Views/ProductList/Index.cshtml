@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ProductVM>
+@{
+    ViewData["Title"] = "Product List";
+}
+
+<section id="shop">
+    <div class="container">
+        <div class="row">
+            <div class="types">
+                    <div class="type all activetype" data-id="1">
+                        <div class="row prod-list text-center">
+                            @*<partial name="_ProductPartial"/>*@
+                            @await Component.InvokeAsync("Products",8)
+                        </div>
+                    </div>              
+            </div>           
+        </div>
+        <div class="row justify-content-center">
+            <i class="fas fa-3x fa-ellipsis-h" id="load" style="cursor: pointer;"></i>
+            <input type="hidden" id="p-count" value="@ViewBag.Count" />
+        </div>
+    </div>
+</section>
+
