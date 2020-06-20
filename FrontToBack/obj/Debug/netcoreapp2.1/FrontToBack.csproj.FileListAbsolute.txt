@@ -39,3 +39,6 @@ E:\Projects\FrontToBack\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Slider\D
 E:\Projects\FrontToBack\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Category\Index.cshtml.g.cs
 E:\Projects\FrontToBack\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Category\Details.cshtml.g.cs
 E:\Projects\FrontToBack\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Category\Create.cshtml.g.cs
+E:\Projects\FrontToBack\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\_Validation.cshtml.g.cs
+E:\Projects\FrontToBack\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Category\Edit.cshtml.g.cs
+E:\Projects\FrontToBack\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Category\Delete.cshtml.g.cs

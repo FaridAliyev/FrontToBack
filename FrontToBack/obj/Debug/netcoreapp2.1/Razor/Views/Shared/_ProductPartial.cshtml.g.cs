@@ -62,7 +62,7 @@ using FrontToBack.ViewModels;
             WriteLiteral("    <div class=\"col-lg-3 col-md-4 col-sm-6 col-12 item\">\r\n        <div class=\"image\">\r\n            ");
             EndContext();
             BeginContext(174, 52, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "443e8d462ebd434ab271a4a822f2470c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "d43a275f69624379aa4cfc4325e06f23", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

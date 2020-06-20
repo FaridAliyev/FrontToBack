@@ -32,7 +32,7 @@
                             {
                                 <tr>
                                     <td>
-                                        @item.Name
+                                        @item.Name.ToUpper()
                                     </td>
                                     <td>
                                         <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success btn-icon-text">
