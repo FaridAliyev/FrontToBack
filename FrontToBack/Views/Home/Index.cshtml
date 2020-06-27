@@ -77,7 +77,9 @@
                                         </div>
                                         <div class="text">
                                             <div class="name">@product.Name</div>
-                                            <div class="action">Add to Cart</div>
+                                            <div class="action">
+                                                <a asp-controller="Home" asp-action="AddToCart" asp-route-id="@product.Id">Add to Cart</a>
+                                            </div>
                                             <div class="price">$@product.Price</div>
                                         </div>
                                     </div>

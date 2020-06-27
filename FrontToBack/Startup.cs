@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FrontToBack.DAL;
+using FrontToBack.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,6 +26,26 @@ namespace FrontToBack
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            //services.AddSession(options =>
+            //{
+            //    options.IdleTimeout = TimeSpan.FromDays(1);
+            //});
+
+            services.AddIdentity<AppUser, IdentityRole>(identityOptions =>
+            {
+                identityOptions.Password.RequireDigit = true;
+                identityOptions.Password.RequiredLength = 6;
+                identityOptions.Password.RequireLowercase = true;
+                identityOptions.Password.RequireUppercase = true;
+                identityOptions.Password.RequireNonAlphanumeric = false;
+
+                identityOptions.User.RequireUniqueEmail = true;
+
+                identityOptions.Lockout.MaxFailedAccessAttempts = 5;
+                identityOptions.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
+                identityOptions.Lockout.AllowedForNewUsers = true;
+            }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
             services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseSqlServer(_config["ConnectionStrings:DefaultConnection"]);
@@ -39,6 +61,8 @@ namespace FrontToBack
             }
 
             app.UseStaticFiles();
+            //app.UseSession();
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

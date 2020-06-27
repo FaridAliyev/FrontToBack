@@ -59,7 +59,7 @@ using FrontToBack.Models;
             WriteLiteral("\r\n<div class=\"row\">\r\n    ");
             EndContext();
             BeginContext(89, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2b962e475751466a8d879311af3eaff3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2195f5f9d3a34c03b778a49937b00b25", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -86,7 +86,7 @@ AddHtmlAttributeValue("", 105, Model.Image, 105, 12, false);
             WriteLiteral("\r\n</div>\r\n<div class=\"row justify-content-end mt-5 mr-5\">\r\n    ");
             EndContext();
             BeginContext(211, 152, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3307067a8ea545ffb7ddbfbe8549f866", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8e7aae6263bb4a24b34e8a121629e083", async() => {
                 BeginContext(268, 91, true);
                 WriteLiteral("\r\n        Go Back\r\n        <i class=\"mdi mdi-keyboard-backspace btn-icon-append\"></i>\r\n    ");
                 EndContext();

@@ -222,14 +222,14 @@
                             <input class="search-field" type="text" placeholder="Search" autocomplete="off">
                             <i class="material-icons search">search</i>
                         </div>
-                        <a href="" class="cart">
+                        <a asp-controller="Home" asp-action="Cart" class="cart">
                             <span class="bag-icon">
                                 <i class="fas fa-shopping-bag bag">
                                     <sup>
-                                        <p id="item-count">0</p>
+                                        <p id="item-count">@ViewBag.CartQuantity</p>
                                     </sup>
                                 </i>
-                                <span>CART(<span class="total-price">$0</span>)</span>
+                                <span>CART(<span class="total-price">$@ViewBag.CartTotal</span>)</span>
                             </span>
                             <ul class="cart-drop">
                                 <li class="cart-items">
@@ -237,7 +237,7 @@
                                 </li>
                                 <div class="subtotal">
                                     <span class="total">TOTAL:</span>
-                                    <span class="amount">$0</span>
+                                    <span class="amount">$@ViewBag.CartTotal</span>
                                 </div>
                                 <div class="buttons">
                                     <button class="view-cart">VIEW CART</button>

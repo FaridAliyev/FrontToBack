@@ -58,7 +58,7 @@ using FrontToBack.ViewModels;
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n");
             EndContext();
             BeginContext(37, 900, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "339a7e429f1549fba1ddd26778fc16fe", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83af92b5ab6d491da9a30dd527f3da63", async() => {
                 BeginContext(43, 804, true);
                 WriteLiteral(@"
     <meta charset=""UTF-8"">
@@ -74,7 +74,7 @@ using FrontToBack.ViewModels;
     ");
                 EndContext();
                 BeginContext(847, 46, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "3f40df9405704d43891629e671e8385f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "eae942dd722044c3800b422951d7caaa", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -118,7 +118,7 @@ using FrontToBack.ViewModels;
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(941, 1159, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "36cb5073809642cdb0b8d51454a27847", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fa7d29113a614eb98a1cb14042431eca", async() => {
                 BeginContext(947, 37, true);
                 WriteLiteral("\r\n\r\n    <!-- navbar start -->\r\n\r\n    ");
                 EndContext();
@@ -175,7 +175,7 @@ Write(await Component.InvokeAsync("Footer"));
     ");
                 EndContext();
                 BeginContext(2053, 38, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "37f92befd62843bc9ac3ea9c93c99043", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e64c9600fc8f41499ecb76f0fd2fb620", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

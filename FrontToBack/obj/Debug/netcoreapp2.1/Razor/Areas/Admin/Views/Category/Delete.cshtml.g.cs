@@ -80,7 +80,7 @@ using FrontToBack.Models;
             WriteLiteral("</p>\r\n            <p class=\"text-danger\">Are you sure to delete this item? Warning: This action is permanent!</p>\r\n        </div>\r\n        <div class=\"col-12\">\r\n            ");
             EndContext();
             BeginContext(373, 161, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e5539950cc834732949c443eb809b74c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "97be00b0468c4cf184c274f09c96f265", async() => {
                 BeginContext(414, 113, true);
                 WriteLiteral("                \r\n                <button type=\"submit\" class=\"btn btn-danger mr-2\">Delete</button>\r\n            ");
                 EndContext();
@@ -105,7 +105,7 @@ using FrontToBack.Models;
             WriteLiteral("\r\n        </div>\r\n    </div>\r\n<div class=\"row justify-content-end mt-5 mr-5\">\r\n    ");
             EndContext();
             BeginContext(617, 152, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ea58c095ef04368a4fbcef2b333efbe", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f1d8388ca866410698baf8e97d1df5c6", async() => {
                 BeginContext(674, 91, true);
                 WriteLiteral("\r\n        Go Back\r\n        <i class=\"mdi mdi-keyboard-backspace btn-icon-append\"></i>\r\n    ");
                 EndContext();
